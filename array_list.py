@@ -17,6 +17,9 @@ class ArrayList(AbstractList):
     
         
     def remove(self, index): 
+        if index < 0 or (index + 1) > self.__size:
+            raise IndexError
+        
         return_index = self.__array[index]
     
         for i in range(99 - index):
@@ -27,9 +30,14 @@ class ArrayList(AbstractList):
         return return_index
 
     def get(self, index):
+        if index < 0 or (index + 1) > self.__size:
+            raise IndexError
+          
         return self.__array[index]
 
     def set(self, index, element): 
+        if index < 0 or (index + 1) > self.__size:
+                raise IndexError
         self.__array[index] = element
 
     def getIndex(self, element): 
