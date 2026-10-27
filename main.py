@@ -5,4 +5,5 @@ lst.add("a")
 lst.add("b")
 lst.add("c")
 lst.remove(1)
-
+print(lst)
+print("hello")
